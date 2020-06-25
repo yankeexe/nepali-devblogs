@@ -8,6 +8,7 @@ Collection of blogs/publications by Nepali devs.
 Name | Tags
 ------------ | -------------
 [Ajay Gautam](https://medium.com/@evilboyajay) | cyber security
+[Aju Tamang](https://www.csaju.com) | python, system design, programming general
 [Amit Chaudhary](https://amitness.com/) | python, ai, ml
 [Ashish Jaiswal](https://jashish.com.np/blog/) | deep learning,
 [Aneeta Sharma](https://medium.com/@anaida07) | programming general, vuejs, database
