@@ -19,7 +19,7 @@ Name | Tags
 [Milap Neupane](https://milapneupane.com.np/) | programming general, go, database, aws, node
 [Nikita Shrestha](https://medium.com/@nikitashrestha_76084) | javascript, ai
 [Nirmal Dahal](https://nirmaldahal.com.np/#latestnews) | cybersecurity
-[Prashant Acharya](https://www.bigomega.dev/) | javascript, react
+[Prashant Acharya](https://www.bigomega.dev/) <br/> [Prashant Acharya (Medium)](https://medium.com/@prashaantacharya) | javascript, react, node.js, programming
 [Rabin Gaire](https://medium.com/@rabin_gaire) | go, rust, javascript
 [Rajesh Khadka](https://medium.com/@rajesh_khadka) | mobile development, microservices, programming general
 [Raju Dawadi](https://medium.com/@dwdraju) | devops
