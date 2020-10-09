@@ -14,6 +14,7 @@ Name | Tags
 [Aneeta Sharma](https://medium.com/@anaida07) | programming general, vuejs, database
 [Bipin Paul](https://bipinpaul.com/) | aspnetcore, dotnet, c#
 [Geshan's blog](https://geshan.com.np/posts/1/) | programming general, devops, software engineering, web development
+[Ishan Manandhar](https://medium.com/@ishan02016) | product design, frontend, javascript, typescript
 [Jagatjyoti Tuladhar](https://medium.com/@jagatjyoti.1si13cs040) | technology general, javascript
 [Kshitiz Rimal](https://medium.com/@kshitizrimal) | ai, ml
 [Milap Neupane](https://milapneupane.com.np/) | programming general, go, database, aws, node
