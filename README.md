@@ -26,6 +26,7 @@ Name | Tags
 [Raju Dawadi](https://medium.com/@dwdraju) | devops
 [Robus Gauli](https://medium.com/@robusgauli) | python, metaprogramming
 [Samundra Shrestha](https://www.samundra.com.np/) | programming general, software development, devops
+[Sanjay Sanjel](https://dev.to/nepalilab) | beginner programming, javascript, nodejs
 [Shirish Shikhrakar](https://ux360.design/) | ui, ux
 [Surhid Amatya](https://medium.com/@surhid.amatya) | programming general, android development
 [Yankee Maharjan](https://medium.com/@yankee.exe) | programming general, python, flask, javascript
