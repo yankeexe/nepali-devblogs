@@ -1,7 +1,7 @@
 # Nepali Dev Blogs
 Collection of blogs/publications by Nepali devs.
 
-> Open a PR to add a blog to the list.
+> Open a PR to add your blog to the list. :zap: :rocket:
 
 ## Personal Blogs
 
