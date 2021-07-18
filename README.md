@@ -25,6 +25,7 @@ Name | Tags
 [Rajesh Khadka](https://medium.com/@rajesh_khadka) | mobile development, microservices, programming general
 [Raju Dawadi](https://medium.com/@dwdraju) | devops
 [Robus Gauli](https://medium.com/@robusgauli) | python, metaprogramming
+[Sagar Giri](https://girisagar46.github.io/) | programming general, software development, aws
 [Samundra Shrestha](https://www.samundra.com.np/) | programming general, software development, devops
 [Sanjay Sanjel](https://dev.to/nepalilab) | beginner programming, javascript, nodejs
 [Shirish Shikhrakar](https://ux360.design/) | ui, ux
