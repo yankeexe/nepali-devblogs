@@ -29,6 +29,7 @@ Name | Tags
 [Samundra Shrestha](https://www.samundra.com.np/) | programming general, software development, devops
 [Sanjay Sanjel](https://dev.to/nepalilab) | beginner programming, javascript, nodejs
 [Shirish Shikhrakar](https://ux360.design/) | ui, ux
+[Sujan Chhetri](https://sujanchhetri.dev/blog) | backend, node.js, programming, software engineering
 [Surhid Amatya](https://medium.com/@surhid.amatya) | programming general, android development
 [Yankee Maharjan](https://medium.com/@yankee.exe) | programming general, python, kubernetes
 
