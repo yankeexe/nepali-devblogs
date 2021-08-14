@@ -18,7 +18,7 @@ Name | Tags
 [Jagatjyoti Tuladhar](https://medium.com/@jagatjyoti.1si13cs040) | technology general, javascript
 [Kshitiz Rimal](https://medium.com/@kshitizrimal) | ai, ml
 [Milap Neupane](https://milapneupane.com.np/) | programming general, go, database, aws, node
-[Nikita Shrestha](https://medium.com/@nikitashrestha_76084) | javascript, ai
+[Nikita Shrestha](https://sthaniki.medium.com/) | javascript, ai
 [Nirmal Dahal](https://nirmaldahal.com.np/#latestnews) | cybersecurity
 [Prashant Acharya](https://www.bigomega.dev/) <br/> [Prashant Acharya (Medium)](https://medium.com/@prashaantacharya) | javascript, react, node.js, programming
 [Rabin Gaire](https://medium.com/@rabin_gaire) | go, rust, javascript
@@ -31,7 +31,7 @@ Name | Tags
 [Shirish Shikhrakar](https://ux360.design/) | ui, ux
 [Sujan Chhetri](https://sujanchhetri.dev/blog) | backend, node.js, programming, software engineering
 [Surhid Amatya](https://medium.com/@surhid.amatya) | programming general, android development
-[Yankee Maharjan](https://medium.com/@yankee.exe) | programming general, python, kubernetes
+[Yankee Maharjan](https://yankeexe.medium.com/) | programming general, python, kubernetes
 
 ## Company Blogs
 - [Kharpann](https://kharpann.com/blog/)
