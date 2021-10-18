@@ -24,6 +24,7 @@ Name | Tags
 [Rabin Gaire](https://medium.com/@rabin_gaire) | go, rust, javascript
 [Rajesh Khadka](https://medium.com/@rajesh_khadka) | mobile development, microservices, programming general
 [Raju Dawadi](https://medium.com/@dwdraju) | devops
+[Roshan Parajuli](https://blogs.roshanparajuli.com.np/) | python, ml, ai, ui/ux
 [Robus Gauli](https://medium.com/@robusgauli) | python, metaprogramming
 [Sagar Giri](https://girisagar46.github.io/) | programming general, software development, aws
 [Samundra Shrestha](https://www.samundra.com.np/) | programming general, software development, devops
