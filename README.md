@@ -24,6 +24,7 @@ Name | Tags
 [Rabin Gaire](https://medium.com/@rabin_gaire) | go, rust, javascript
 [Rajesh Khadka](https://medium.com/@rajesh_khadka) | mobile development, microservices, programming general
 [Raju Dawadi](https://medium.com/@dwdraju) | devops
+[Ramkrishna Acharya](https://q-viper.github.io) | Basic AI, ML
 [Robus Gauli](https://medium.com/@robusgauli) | python, metaprogramming
 [Roshan Parajuli](https://blogs.roshanparajuli.com.np/) | python, ml, ai, ui/ux
 [Sagar Giri](https://girisagar46.github.io/) | programming general, software development, aws
