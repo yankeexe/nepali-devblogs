@@ -34,6 +34,7 @@ Name | Tags
 [Sujan Chhetri](https://sujanchhetri.dev/blog) | backend, node.js, programming, software engineering
 [Surhid Amatya](https://medium.com/@surhid.amatya) | programming general, android development
 [Yankee Maharjan](https://yankeexe.medium.com/) | programming general, python, kubernetes
+[Veshraj Ghimire](https://veshraj77.medium.com/) | Web Security, Bug Bounties, Cyber Security
 
 ## Company Blogs
 - [Kharpann](https://kharpann.com/blog/)
@@ -41,3 +42,4 @@ Name | Tags
 - [Nassec](https://medium.com/nassec-cybersecurity-writeups)
 - [Programiz](https://www.programiz.com/blog/)
 - [Young Innovations](https://blog.yipl.com.np/)
+- [Pentester Nepal](https://medium.com/pentesternepal/)
