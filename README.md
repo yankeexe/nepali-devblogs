@@ -41,3 +41,7 @@ Name | Tags
 - [Nassec](https://medium.com/nassec-cybersecurity-writeups)
 - [Programiz](https://www.programiz.com/blog/)
 - [Young Innovations](https://blog.yipl.com.np/)
+- [CryptoGen Nepal](https://cryptogennepal.com/)
+   - [Medium](https://medium.com/cryptogennepal) 
+   - [Blog](https://blog.cryptogennepal.com/)
+   - [InfoSec](https://infosec.cryptogennepal.com/)
