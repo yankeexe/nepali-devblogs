@@ -1,4 +1,5 @@
 # Nepali Dev Blogs
+
 Collection of blogs/publications by Nepali devs.
 
 > Open a PR to add your blog to the list. :zap: :rocket:
@@ -10,7 +11,7 @@ Name | Tags
 [Ajay Gautam](https://medium.com/@evilboyajay) | cyber security
 [Aju Tamang](https://www.csaju.com) | python, system design, programming general
 [Amit Chaudhary](https://amitness.com/) | python, ai, ml
-[Ashish Jaiswal](https://jashish.com.np/blog/) | deep learning,
+[Ashish Jaiswal](https://jashish.com.np/blog/) | deep learning
 [Aneeta Sharma](https://medium.com/@anaida07) | programming general, vuejs, database
 [Bipin Paul](https://bipinpaul.com/) | aspnetcore, dotnet, c#
 [Geshan's blog](https://geshan.com.np/posts/1/) | programming general, devops, software engineering, web development
@@ -30,12 +31,14 @@ Name | Tags
 [Sagar Giri](https://girisagar46.github.io/) | programming general, software development, aws
 [Samundra Shrestha](https://www.samundra.com.np/) | programming general, software development, devops
 [Sanjay Sanjel](https://dev.to/nepalilab) | beginner programming, javascript, nodejs
+[Saugat Acharya](https://theboring.dev) | tech, software engineering
 [Shirish Shikhrakar](https://ux360.design/) | ui, ux
 [Sujan Chhetri](https://sujanchhetri.dev/blog) | backend, node.js, programming, software engineering
 [Surhid Amatya](https://medium.com/@surhid.amatya) | programming general, android development
 [Yankee Maharjan](https://yankeexe.medium.com/) | programming general, python, kubernetes
 
 ## Company Blogs
+
 - [Kharpann](https://kharpann.com/blog/)
 - [Leapfrog Technology](https://lftechnology.com/blog)
 - [Nassec](https://medium.com/nassec-cybersecurity-writeups)
