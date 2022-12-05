@@ -21,7 +21,7 @@ Name | Tags
 [Milap Neupane](https://milapneupane.com.np/) | programming general, go, database, aws, node
 [Nikita Shrestha](https://sthaniki.medium.com/) | javascript, ai
 [Nirmal Dahal](https://nirmaldahal.com.np/#latestnews) | cybersecurity
-[Prashant Acharya](https://www.bigomega.dev/) <br/> [Prashant Acharya (Medium)](https://medium.com/@prashaantacharya) | javascript, react, node.js, programming
+[Prashant Acharya](https://medium.com/@prashaantacharya) | javascript, react, node.js, programming
 [Rabin Gaire](https://medium.com/@rabin_gaire) | go, rust, javascript
 [Rajesh Khadka](https://medium.com/@rajesh_khadka) | mobile development, microservices, programming general
 [Raju Dawadi](https://medium.com/@dwdraju) | devops
@@ -35,16 +35,15 @@ Name | Tags
 [Shirish Shikhrakar](https://ux360.design/) | ui, ux
 [Sujan Chhetri](https://sujanchhetri.dev/blog) | backend, node.js, programming, software engineering
 [Surhid Amatya](https://medium.com/@surhid.amatya) | programming general, android development
-[Yankee Maharjan](https://yankeexe.medium.com/) | programming general, python, kubernetes
 [Veshraj Ghimire](https://veshraj77.medium.com/) | Web Security, Bug Bounties, Cyber Security
+[Yankee Maharjan](https://yankeexe.medium.com/) | programming general, python, kubernetes
 
 ## Company Blogs
 
 - CryptoGen Nepal
-   - [Medium](https://medium.com/cryptogennepal) 
+   - [Medium](https://medium.com/cryptogennepal)
    - [Blog](https://blog.cryptogennepal.com/)
    - [InfoSec](https://infosec.cryptogennepal.com/)
-- [Kharpann](https://kharpann.com/blog/)
 - [Leapfrog Technology](https://lftechnology.com/blog)
 - [Nassec](https://medium.com/nassec-cybersecurity-writeups)
 - [Pentester Nepal](https://medium.com/pentesternepal/)
