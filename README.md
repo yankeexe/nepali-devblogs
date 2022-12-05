@@ -40,9 +40,13 @@ Name | Tags
 
 ## Company Blogs
 
+- CryptoGen Nepal
+   - [Medium](https://medium.com/cryptogennepal) 
+   - [Blog](https://blog.cryptogennepal.com/)
+   - [InfoSec](https://infosec.cryptogennepal.com/)
 - [Kharpann](https://kharpann.com/blog/)
 - [Leapfrog Technology](https://lftechnology.com/blog)
 - [Nassec](https://medium.com/nassec-cybersecurity-writeups)
+- [Pentester Nepal](https://medium.com/pentesternepal/)
 - [Programiz](https://www.programiz.com/blog/)
 - [Young Innovations](https://blog.yipl.com.np/)
-- [Pentester Nepal](https://medium.com/pentesternepal/)
