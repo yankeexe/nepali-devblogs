@@ -44,8 +44,12 @@ Name | Tags
    - [Medium](https://medium.com/cryptogennepal)
    - [Blog](https://blog.cryptogennepal.com/)
    - [InfoSec](https://infosec.cryptogennepal.com/)
+- [Docsumo](https://www.docsumo.com/blog)
+- [FuseMachines](https://insights.fusemachines.com/category/blog/)
 - [Leapfrog Technology](https://lftechnology.com/blog)
 - [Nassec](https://medium.com/nassec-cybersecurity-writeups)
 - [Pentester Nepal](https://medium.com/pentesternepal/)
 - [Programiz](https://www.programiz.com/blog/)
+- [Yarsa Labs](https://blog.yarsalabs.com/)
 - [Young Innovations](https://blog.yipl.com.np/)
+
