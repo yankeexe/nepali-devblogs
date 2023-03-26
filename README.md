@@ -36,14 +36,11 @@ Name | Tags
 [Sujan Chhetri](https://sujanchhetri.dev/blog) | backend, node.js, programming, software engineering
 [Surhid Amatya](https://medium.com/@surhid.amatya) | programming general, android development
 [Veshraj Ghimire](https://veshraj77.medium.com/) | Web Security, Bug Bounties, Cyber Security
-[Yankee Maharjan](https://yankeexe.medium.com/) | programming general, python, kubernetes
+[Yankee Maharjan](https://yankee.dev/) | programming general, python, kubernetes
 
 ## Company Blogs
 
-- CryptoGen Nepal
-   - [Medium](https://medium.com/cryptogennepal)
-   - [Blog](https://blog.cryptogennepal.com/)
-   - [InfoSec](https://infosec.cryptogennepal.com/)
+- [CryptoGen Nepal](https://medium.com/cryptogennepal)
 - [Docsumo](https://www.docsumo.com/blog)
 - [FuseMachines](https://insights.fusemachines.com/category/blog/)
 - [Leapfrog Technology](https://lftechnology.com/blog)
