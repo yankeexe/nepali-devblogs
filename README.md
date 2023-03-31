@@ -47,6 +47,6 @@ Name | Tags
 - [Nassec](https://medium.com/nassec-cybersecurity-writeups)
 - [Pentester Nepal](https://medium.com/pentesternepal/)
 - [Programiz](https://www.programiz.com/blog/)
+- [Rara Labs](https://medium.com/@raralabs)
 - [Yarsa Labs](https://blog.yarsalabs.com/)
 - [Young Innovations](https://blog.yipl.com.np/)
-- [Rara Labs](https://medium.com/@raralabs)
