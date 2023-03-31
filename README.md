@@ -44,6 +44,7 @@ Name | Tags
 - [Docsumo](https://www.docsumo.com/blog)
 - [FuseMachines](https://insights.fusemachines.com/category/blog/)
 - [Leapfrog Technology](https://lftechnology.com/blog)
+- [Naamche](https://www.naamche.com/blog)
 - [Nassec](https://medium.com/nassec-cybersecurity-writeups)
 - [Pentester Nepal](https://medium.com/pentesternepal/)
 - [Programiz](https://www.programiz.com/blog/)
