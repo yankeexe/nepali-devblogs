@@ -29,6 +29,7 @@ Name | Tags
 [Robus Gauli](https://medium.com/@robusgauli) | python, metaprogramming
 [Roshan Parajuli](https://blogs.roshanparajuli.com.np/) | python, ml, ai, ui/ux
 [Sagar Giri](https://girisagar46.github.io/) | programming general, software development, aws
+[Samrid Pandit](https://blog.samrid.me/) | python, software development principles, rust
 [Samundra Shrestha](https://www.samundra.com.np/) | programming general, software development, devops
 [Sanjay Sanjel](https://dev.to/nepalilab) | beginner programming, javascript, nodejs
 [Saugat Acharya](https://theboring.dev) | tech, software engineering
