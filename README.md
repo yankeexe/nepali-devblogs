@@ -14,6 +14,7 @@ Name | Tags
 [Ashish Jaiswal](https://jashish.com.np/blog/) | deep learning
 [Aneeta Sharma](https://medium.com/@anaida07) | programming general, vuejs, database
 [Bipin Paul](https://bipinpaul.com/) | aspnetcore, dotnet, c#
+[Chandan Shakya](https://chandanshakya.com.np/blog/) | devops, linux, laravel, scripts
 [Geshan's blog](https://geshan.com.np/posts/1/) | programming general, devops, software engineering, web development
 [Ishan Manandhar](https://medium.com/@ishan02016) | product design, frontend, javascript, typescript
 [Jagatjyoti Tuladhar](https://medium.com/@jagatjyoti.1si13cs040) | technology general, javascript
