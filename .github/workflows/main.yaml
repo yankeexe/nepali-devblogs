@@ -9,5 +9,7 @@ jobs:
   MarkdownLinkCheck:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: gaurav-nelson/github-action-markdown-link-check@v1
+      - uses: actions/checkout@v4
+      - uses: yankeexe/action-link-checker@main
+        with:
+          file_path: "README.md"
