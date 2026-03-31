@@ -28,7 +28,6 @@ Collection of blogs/publications by Nepali devs.
 | [Raju Dawadi](https://medium.com/@dwdraju)                       | devops                                                             |
 | [Ramkrishna Acharya](https://q-viper.github.io)                  | Basic AI, ML                                                       |
 | [Robus Gauli](https://medium.com/@robusgauli)                    | python, metaprogramming                                            |
-| [Roshan Parajuli](https://blogs.roshanparajuli.com.np/)          | python, ml, ai, ui/ux                                              |
 | [Sagar Giri](https://girisagar46.github.io/)                     | programming general, software development, aws                     |
 | [Samrid Pandit](https://blog.samrid.me/)                         | python, software development principles, rust                      |
 | [Samundra Shrestha](https://www.samundra.com.np/)                | programming general, software development, devops                  |
