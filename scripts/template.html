@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nepali Dev Blogs</title>
+  <meta name="description" content="A curated collection of blogs &amp; publications by Nepali developers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --crimson:      #B11116;
+      --crimson-dark: #7A0B0E;
+      --crimson-glow: rgba(177,17,22,0.4);
+      --navy:         #0D1B2A;
+      --navy-mid:     #142236;
+      --navy-light:   #1E3352;
+      --blue-range:   #1A2B5F;
+      --gold:         #E8A838;
+      --gold-light:   #F5C96A;
+      --snow:         #F8F4EF;
+      --mist:         #C5D0DC;
+      --slate:        #7A90A8;
+      --terminal:     #00FF88;
+      --terminal-dim: rgba(0,255,136,0.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--navy);
+      color: var(--snow);
+      font-family: 'Noto Serif', Georgia, serif;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* Prayer flags */
+    .prayer-flags { display: flex; height: 6px; width: 100%; position: fixed; top: 0; left: 0; z-index: 100; }
+    .flag { flex: 1; }
+    .flag.blue   { background: #1B5FA8; }
+    .flag.white  { background: #EEF2F7; }
+    .flag.red    { background: #C0392B; }
+    .flag.green  { background: #1E7A3E; }
+    .flag.yellow { background: #E8A838; }
+
+    /* Hero */
+    .hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      padding: 80px 24px 40px; overflow: hidden;
+    }
+    .mountain-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 20%, #1A2B5F 0%, #0D1B2A 65%);
+    }
+    .stars {
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 8%  10%, rgba(255,255,255,.85) 0%,transparent 100%),
+        radial-gradient(1px 1px at 18%  5%, rgba(255,255,255,.6)  0%,transparent 100%),
+        radial-gradient(1px 1px at 32% 18%, rgba(255,255,255,.9)  0%,transparent 100%),
+        radial-gradient(1px 1px at 47%  4%, rgba(255,255,255,.7)  0%,transparent 100%),
+        radial-gradient(1px 1px at 58% 14%, rgba(255,255,255,.8)  0%,transparent 100%),
+        radial-gradient(1px 1px at 72%  8%, rgba(255,255,255,.5)  0%,transparent 100%),
+        radial-gradient(1px 1px at 82% 20%, rgba(255,255,255,.7)  0%,transparent 100%),
+        radial-gradient(1px 1px at 93% 12%, rgba(255,255,255,.6)  0%,transparent 100%),
+        radial-gradient(1.5px 1.5px at 13% 28%, rgba(255,255,255,.7) 0%,transparent 100%),
+        radial-gradient(1px 1px at 28% 33%, rgba(255,255,255,.5)  0%,transparent 100%),
+        radial-gradient(1px 1px at 64% 26%, rgba(255,255,255,.8)  0%,transparent 100%),
+        radial-gradient(2px 2px   at 22% 20%, rgba(232,168,56,.6)  0%,transparent 100%),
+        radial-gradient(1.5px 1.5px at 66%  9%, rgba(232,168,56,.5) 0%,transparent 100%),
+        radial-gradient(1px 1px at 88% 36%, rgba(255,255,255,.7)  0%,transparent 100%);
+      pointer-events: none;
+    }
+    .mountains { position: absolute; bottom: 0; left: 0; width: 100%; height: 55%; }
+    .hero-content {
+      position: relative; z-index: 10;
+      text-align: center; max-width: 800px;
+      animation: fadeUp .9s ease both;
+    }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes pulse-glow {
+      0%,100% { text-shadow: 0 0 60px rgba(177,17,22,.4), 0 0 120px rgba(177,17,22,.2); }
+      50%      { text-shadow: 0 0 80px rgba(177,17,22,.6), 0 0 160px rgba(177,17,22,.3); }
+    }
+    .terminal-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(13,27,42,.85); border: 1px solid rgba(0,255,136,.3);
+      border-radius: 8px; padding: 6px 14px; margin-bottom: 32px;
+      backdrop-filter: blur(8px);
+    }
+    .tdot { width:10px; height:10px; border-radius:50%; }
+    .tdot.r { background:#FF5F57; } .tdot.y { background:#FFBD2E; } .tdot.g { background:#28C840; }
+    .tlabel { font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--terminal); margin-left:4px; letter-spacing:.04em; }
+    .site-title { display:flex; flex-direction:column; align-items:center; gap:6px; margin-bottom:18px; line-height:1; }
+    .title-np {
+      font-family:'Eczar',serif; font-size:clamp(54px,9vw,104px);
+      font-weight:800; color:var(--crimson); letter-spacing:-.02em;
+      animation: pulse-glow 4s ease-in-out infinite;
+    }
+    .title-en { font-family:'Eczar',serif; font-size:clamp(28px,4vw,52px); font-weight:600; color:var(--snow); letter-spacing:.05em; }
+    .site-tagline { font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--mist); margin-bottom:26px; letter-spacing:.03em; }
+    .hero-meta { display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:36px; flex-wrap:wrap; }
+    .meta-item { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--slate); display:flex; align-items:center; gap:5px; }
+    .meta-divider { color:var(--navy-light); font-size:18px; }
+    .cta-btn {
+      display:inline-flex; align-items:center; gap:8px;
+      background:var(--crimson); color:var(--snow);
+      font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:500;
+      padding:13px 28px; border-radius:6px; text-decoration:none;
+      transition:all .2s ease; letter-spacing:.03em;
+      box-shadow: 0 4px 24px var(--crimson-glow);
+    }
+    .cta-btn:hover { background:var(--crimson-dark); transform:translateY(-2px); box-shadow:0 8px 40px var(--crimson-glow); }
+
+    /* Main */
+    .main-content { max-width:1100px; margin:0 auto; padding:80px 24px 100px; }
+    .section-heading {
+      display:flex; align-items:center; gap:10px;
+      font-family:'Eczar',serif; font-size:clamp(20px,2.5vw,28px); font-weight:700;
+      color:var(--gold); margin:64px 0 28px; padding-bottom:14px;
+      border-bottom:1px solid rgba(232,168,56,.18);
+    }
+    .section-heading .slash { font-family:'JetBrains Mono',monospace; font-size:16px; color:var(--terminal); opacity:.7; }
+
+    /* Stats */
+    .stats-bar { display:flex; gap:24px; flex-wrap:wrap; margin-bottom:48px; }
+    .stat { display:flex; flex-direction:column; background:var(--navy-mid); border:1px solid rgba(30,51,82,.8); border-radius:10px; padding:16px 24px; min-width:140px; }
+    .stat-num { font-family:'Eczar',serif; font-size:36px; font-weight:800; color:var(--crimson); line-height:1; margin-bottom:4px; }
+    .stat-label { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--slate); letter-spacing:.05em; text-transform:uppercase; }
+
+    /* Tag filter */
+    .filter-bar { margin-bottom:28px; }
+    .filter-label {
+      font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--slate);
+      letter-spacing:.08em; text-transform:uppercase; margin-bottom:12px;
+      display:flex; align-items:center; gap:8px;
+    }
+    .filter-label::before {
+      content:''; display:inline-block; width:6px; height:6px;
+      border-radius:50%; background:var(--terminal); box-shadow:0 0 6px var(--terminal);
+    }
+    .filter-count-badge {
+      display:inline-flex; align-items:center; justify-content:center;
+      background:var(--crimson); color:var(--snow);
+      font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:700;
+      border-radius:10px; padding:1px 7px; margin-left:4px; min-width:20px;
+      transition:opacity .2s;
+    }
+    .filter-count-badge.hidden { opacity:0; pointer-events:none; }
+    .filter-chips { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+    .filter-chip {
+      font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--slate);
+      background:var(--navy-mid); border:1px solid rgba(30,51,82,.9);
+      padding:5px 12px; border-radius:20px; cursor:pointer;
+      transition:all .15s ease; user-select:none; letter-spacing:.02em; white-space:nowrap;
+    }
+    .filter-chip:hover { border-color:rgba(0,255,136,.3); color:var(--terminal); }
+    .filter-chip.active { background:var(--terminal-dim); border-color:rgba(0,255,136,.5); color:var(--terminal); box-shadow:0 0 10px rgba(0,255,136,.1); }
+    .filter-chip.clear-btn { color:var(--crimson); border-color:rgba(177,17,22,.3); background:rgba(177,17,22,.08); display:none; }
+    .filter-chip.clear-btn:hover { background:rgba(177,17,22,.15); border-color:rgba(177,17,22,.5); color:#ff4a4a; }
+    .filter-chip.clear-btn.visible { display:inline-flex; align-items:center; gap:5px; }
+
+    .results-meta { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--slate); margin-bottom:20px; min-height:18px; }
+    .results-meta .match-count { color:var(--terminal); font-weight:700; }
+
+    /* Blog cards */
+    .blog-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(290px,1fr)); gap:16px; }
+    .blog-card {
+      background:var(--navy-mid); border:1px solid rgba(30,51,82,.9);
+      border-radius:12px; padding:22px; text-decoration:none;
+      transition:all .2s ease; position:relative; overflow:hidden;
+      display:flex; flex-direction:column; gap:10px;
+    }
+    .blog-card::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:3px;
+      background:linear-gradient(90deg,var(--crimson),var(--gold));
+      opacity:0; transition:opacity .2s ease;
+    }
+    .blog-card:hover { border-color:rgba(232,168,56,.3); transform:translateY(-3px); box-shadow:0 16px 48px rgba(0,0,0,.5); }
+    .blog-card:hover::before { opacity:1; }
+    .blog-card.hidden { display:none; }
+    .card-avatar {
+      width:36px; height:36px; border-radius:8px;
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Eczar',serif; font-size:15px; font-weight:700; color:var(--snow); flex-shrink:0;
+    }
+    .card-header { display:flex; align-items:center; gap:12px; }
+    .card-name { font-family:'Eczar',serif; font-size:17px; font-weight:600; color:var(--snow); line-height:1.3; }
+    .card-link-icon { margin-left:auto; color:var(--slate); font-size:14px; flex-shrink:0; transition:color .15s; }
+    .blog-card:hover .card-link-icon { color:var(--gold); }
+    .card-tags { display:flex; flex-wrap:wrap; gap:5px; }
+    .tag {
+      font-family:'JetBrains Mono',monospace; font-size:10px;
+      color:var(--terminal); background:var(--terminal-dim);
+      border:1px solid rgba(0,255,136,.15); padding:2px 8px;
+      border-radius:4px; letter-spacing:.02em;
+      cursor:pointer; transition:all .15s ease;
+    }
+    .tag:hover { background:rgba(0,255,136,.25); border-color:rgba(0,255,136,.5); }
+    .tag.active-tag { background:rgba(0,255,136,.25); border-color:rgba(0,255,136,.6); color:#fff; font-weight:700; }
+    .empty-state { display:none; text-align:center; padding:60px 24px; grid-column:1/-1; }
+    .empty-state.visible { display:block; }
+    .empty-state-icon { font-size:40px; margin-bottom:12px; }
+    .empty-state h4 { font-family:'Eczar',serif; font-size:20px; color:var(--mist); margin-bottom:6px; }
+    .empty-state p { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--slate); }
+
+    /* Company cards */
+    .company-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; }
+    .company-card {
+      display:flex; align-items:center; gap:10px;
+      background:var(--navy-mid); border:1px solid rgba(30,51,82,.8);
+      border-radius:8px; padding:14px 18px; text-decoration:none;
+      color:var(--mist); font-family:'JetBrains Mono',monospace; font-size:13px;
+      transition:all .2s ease;
+    }
+    .company-card::before { content:'→'; color:var(--crimson); font-weight:700; flex-shrink:0; }
+    .company-card:hover { border-color:rgba(177,17,22,.4); color:var(--snow); transform:translateY(-2px); }
+
+    /* Contribute */
+    .contribute-section {
+      margin:80px 0 0;
+      background:linear-gradient(135deg,rgba(177,17,22,.1) 0%,rgba(26,43,95,.3) 100%);
+      border:1px solid rgba(177,17,22,.25); border-radius:16px; padding:40px; text-align:center;
+    }
+    .contribute-section h3 { font-family:'Eczar',serif; font-size:26px; font-weight:700; color:var(--snow); margin-bottom:12px; }
+    .contribute-section p { font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--mist); margin-bottom:24px; }
+
+    /* Footer */
+    .site-footer { background:var(--navy); border-top:1px solid rgba(30,51,82,.8); }
+    .footer-mountains { width:100%; height:70px; overflow:hidden; line-height:0; }
+    .footer-mountains svg { width:100%; height:100%; }
+    .footer-inner { text-align:center; padding:32px 24px 56px; }
+    .footer-logo { font-family:'Eczar',serif; font-size:22px; font-weight:700; color:var(--snow); margin-bottom:8px; }
+    .footer-logo .np { color:var(--crimson); }
+    .footer-desc { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--slate); margin-bottom:20px; }
+    .footer-links { display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--slate); }
+    .footer-links a { color:var(--mist); text-decoration:none; transition:color .15s; }
+    .footer-links a:hover { color:var(--gold); }
+    .footer-links .dot { color:var(--navy-light); }
+
+    @media (max-width: 640px) {
+      .hero-meta { display:none; }
+      .blog-grid { grid-template-columns:1fr; }
+      .stats-bar { gap:12px; }
+      .contribute-section { padding:28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Prayer flags -->
+<div class="prayer-flags">
+  {% for color in ['blue','white','red','green','yellow'] * 4 %}
+  <span class="flag {{ color }}"></span>
+  {% endfor %}
+</div>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="mountain-bg">
+    <div class="stars"></div>
+    <svg class="mountains" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <linearGradient id="snowcap" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="rgba(248,244,239,0.18)"/>
+          <stop offset="100%" stop-color="rgba(248,244,239,0)"/>
+        </linearGradient>
+      </defs>
+      <polygon points="0,320 100,190 220,250 360,130 500,210 620,90 740,165 860,50 980,140 1110,75 1230,155 1360,95 1440,145 1440,320" fill="rgba(26,43,95,0.45)"/>
+      <polygon points="0,320 70,250 190,285 310,170 440,225 565,110 685,180 805,58 925,125 1045,65 1165,145 1290,82 1440,162 1440,320" fill="rgba(13,27,42,0.65)"/>
+      <polygon points="565,110 630,160 685,180 750,120 805,58 860,95 925,125 985,85 1045,65 1105,105 1165,145 1220,110 1290,82 1330,100 1440,162 1440,115 1350,75 1285,65 1220,92 1160,128 1100,88 1040,48 980,108 920,108 860,78 800,40 740,162 685,162 630,142 565,92" fill="url(#snowcap)" filter="url(#glow)"/>
+      <polygon points="0,320 90,290 210,308 330,235 470,278 595,188 718,252 855,168 978,218 1105,178 1225,238 1345,205 1440,258 1440,320" fill="#0D1B2A"/>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <div class="terminal-badge">
+      <span class="tdot r"></span><span class="tdot y"></span><span class="tdot g"></span>
+      <span class="tlabel">~/nepal/devblogs <span style="color:var(--slate)">$</span> <span style="opacity:.5">▋</span></span>
+    </div>
+    <h1 class="site-title">
+      <span class="title-np">नेपाली</span>
+      <span class="title-en">Dev Blogs</span>
+    </h1>
+    <p class="site-tagline">// A curated collection of blogs &amp; publications by Nepali developers</p>
+    <div class="hero-meta">
+      <span class="meta-item">⛰&nbsp; From the Himalayas</span>
+      <span class="meta-divider">·</span>
+      <span class="meta-item">⌨&nbsp; Built by devs</span>
+      <span class="meta-divider">·</span>
+      <span class="meta-item">🔗&nbsp; Open source</span>
+    </div>
+    <a href="https://github.com/yankeexe/nepali-devblogs" class="cta-btn" target="_blank" rel="noopener">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+      Open a PR · Add your blog
+    </a>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="main-content">
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stat">
+      <span class="stat-num">{{ stats.personal }}</span>
+      <span class="stat-label">Personal Blogs</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">{{ stats.companies }}</span>
+      <span class="stat-label">Company Blogs</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">{{ stats.topics }}+</span>
+      <span class="stat-label">Tech Topics</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">🇳🇵</span>
+      <span class="stat-label">All Nepali Devs</span>
+    </div>
+  </div>
+
+  <!-- Personal Blogs -->
+  <div class="section-heading"><span class="slash">//</span> Personal Blogs</div>
+
+  <!-- Tag filter bar (chips populated by JS from the embedded data) -->
+  <div class="filter-bar">
+    <div class="filter-label">
+      Filter by tag
+      <span class="filter-count-badge hidden" id="active-count">0</span>
+    </div>
+    <div class="filter-chips" id="filter-chips"></div>
+  </div>
+
+  <div class="results-meta" id="results-meta"></div>
+
+  <!-- Blog grid — rendered server-side, filtered client-side -->
+  <div class="blog-grid" id="blog-grid">
+    {% set gradients = [
+      ('#B11116','#1A2B5F'), ('#1A2B5F','#E8A838'),
+      ('#7A0B0E','#1E3352'), ('#E8A838','#B11116'),
+      ('#1E7A3E','#1A2B5F'), ('#1B5FA8','#B11116')
+    ] %}
+    {% for blog in personal_blogs %}
+      {% set g = gradients[loop.index0 % gradients|length] %}
+      {% set initials = (blog.name.split(' ') | map('first') | list)[:2] | join %}
+      <a class="blog-card"
+         href="{{ blog.url }}"
+         target="_blank"
+         rel="noopener"
+         data-tags="{{ blog.tags | tojson }}">
+        <div class="card-header">
+          <div class="card-avatar"
+               style="background:linear-gradient(135deg,{{ g[0] }},{{ g[1] }})">
+            {{ initials }}
+          </div>
+          <span class="card-name">{{ blog.name }}</span>
+          <span class="card-link-icon">↗</span>
+        </div>
+        <div class="card-tags">
+          {% for tag in blog.tags %}
+          <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </a>
+    {% endfor %}
+
+    <div class="empty-state" id="empty-state">
+      <div class="empty-state-icon">⛰️</div>
+      <h4>No blogs match these tags</h4>
+      <p>// Try selecting different tags or clear the filter</p>
+    </div>
+  </div>
+
+  <!-- Company Blogs -->
+  <div class="section-heading"><span class="slash">//</span> Company Blogs</div>
+  <div class="company-grid">
+    {% for company in company_blogs %}
+    <a href="{{ company.url }}"
+       class="company-card"
+       target="_blank"
+       rel="noopener">{{ company.name }}</a>
+    {% endfor %}
+  </div>
+
+  <!-- Contribute CTA -->
+  <div class="contribute-section" id="contribute">
+    <h3>Know a Nepali dev who blogs?</h3>
+    <p>// Edit the README.md and open a Pull Request — the site rebuilds automatically.</p>
+    <a href="https://github.com/yankeexe/nepali-devblogs" class="cta-btn" target="_blank" rel="noopener">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+      Contribute on GitHub
+    </a>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-mountains">
+    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <polygon points="0,70 180,22 360,48 540,12 720,38 900,6 1080,33 1260,14 1440,28 1440,70" fill="rgba(177,17,22,0.12)"/>
+      <polygon points="0,70 140,40 310,60 490,28 660,50 840,18 1020,44 1200,25 1440,42 1440,70" fill="rgba(26,43,95,0.15)"/>
+    </svg>
+  </div>
+  <div class="footer-inner">
+    <div class="footer-logo"><span class="np">नेपाली</span> Dev Blogs</div>
+    <p class="footer-desc">// Celebrating the Nepali developer community — one blog at a time.</p>
+    <div class="footer-links">
+      <a href="https://github.com/yankeexe/nepali-devblogs" target="_blank">GitHub</a>
+      <span class="dot">·</span>
+      <a href="#contribute">Contribute</a>
+      <span class="dot">·</span>
+      <span>Made with ❤️ &amp; ☕ from Nepal 🇳🇵</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ── Tag filter — all state lives in the DOM, no JSON blob needed ────────
+  const activeTags        = new Set();
+  const chipsContainer    = document.getElementById('filter-chips');
+  const grid              = document.getElementById('blog-grid');
+  const emptyState        = document.getElementById('empty-state');
+  const resultsMeta       = document.getElementById('results-meta');
+  const activeCountBadge  = document.getElementById('active-count');
+
+  // Collect unique tags from rendered cards (single source of truth)
+  const allTags = [...new Set(
+    [...document.querySelectorAll('.blog-card')]
+      .flatMap(c => JSON.parse(c.dataset.tags))
+  )].sort();
+
+  // Clear button
+  const clearBtn = document.createElement('span');
+  clearBtn.className = 'filter-chip clear-btn';
+  clearBtn.innerHTML = `<svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="1" y1="1" x2="9" y2="9"/><line x1="9" y1="1" x2="1" y2="9"/></svg> Clear all`;
+  clearBtn.addEventListener('click', () => { activeTags.clear(); updateUI(); filterCards(); });
+
+  // Render filter chips
+  allTags.forEach(tag => {
+    const chip = document.createElement('span');
+    chip.className = 'filter-chip';
+    chip.textContent = tag;
+    chip.dataset.tag = tag;
+    chip.addEventListener('click', () => toggleTag(tag));
+    chipsContainer.appendChild(chip);
+  });
+  chipsContainer.appendChild(clearBtn);
+
+  // Intercept tag clicks inside cards
+  grid.addEventListener('click', e => {
+    const tagEl = e.target.closest('.tag');
+    if (!tagEl) return;
+    e.preventDefault();
+    e.stopPropagation();
+    toggleTag(tagEl.dataset.tag);
+  });
+
+  function toggleTag(tag) {
+    activeTags.has(tag) ? activeTags.delete(tag) : activeTags.add(tag);
+    updateUI();
+    filterCards();
+  }
+
+  function updateUI() {
+    const count = activeTags.size;
+    chipsContainer.querySelectorAll('.filter-chip[data-tag]').forEach(c =>
+      c.classList.toggle('active', activeTags.has(c.dataset.tag)));
+    grid.querySelectorAll('.tag[data-tag]').forEach(t =>
+      t.classList.toggle('active-tag', activeTags.has(t.dataset.tag)));
+    clearBtn.classList.toggle('visible', count > 0);
+    activeCountBadge.textContent = count;
+    activeCountBadge.classList.toggle('hidden', count === 0);
+  }
+
+  function filterCards() {
+    const cards = grid.querySelectorAll('.blog-card');
+    let visible = 0;
+    cards.forEach(card => {
+      const cardTags = JSON.parse(card.dataset.tags);
+      const matches  = activeTags.size === 0 ||
+        [...activeTags].every(t => cardTags.includes(t));
+      card.classList.toggle('hidden', !matches);
+      if (matches) visible++;
+    });
+    emptyState.classList.toggle('visible', visible === 0);
+    if (activeTags.size === 0) {
+      resultsMeta.innerHTML = '';
+    } else {
+      const tagList = [...activeTags]
+        .map(t => `<span style="color:var(--terminal)">${t}</span>`)
+        .join(' + ');
+      resultsMeta.innerHTML =
+        `<span class="match-count">${visible}</span> blog${visible !== 1 ? 's' : ''} tagged ${tagList}`;
+    }
+  }
+</script>
+</body>
+</html>
