@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline';">
   <title>Nepali Dev Blogs</title>
   <meta name="description" content="A curated collection of blogs &amp; publications by Nepali developers." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -996,7 +998,17 @@
       activeCountBadge.textContent = count;
       activeCountBadge.classList.toggle('hidden', count === 0);
     }
-
+    function escapeHTML(str) {
+      return str.replace(/[&<>'"]/g,
+        tag => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          "'": '&#39;',
+          '"': '&quot;'
+        }[tag] || tag)
+      );
+    }
     function filterCards() {
       const cards = grid.querySelectorAll('.blog-card');
       let visible = 0;
@@ -1012,7 +1024,7 @@
         resultsMeta.innerHTML = '';
       } else {
         const tagList = [...activeTags]
-          .map(t => `<span style="color:var(--terminal)">${t}</span>`)
+          .map(t => `<span style="color:var(--terminal)">${escapeHTML(t)}</span>`)
           .join(' + ');
         resultsMeta.innerHTML =
           `<span class="match-count">${visible}</span> blog${visible !== 1 ? 's' : ''} tagged ${tagList}`;
