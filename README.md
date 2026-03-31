@@ -50,5 +50,7 @@ Collection of blogs/publications by Nepali devs.
 - [Programiz](https://www.programiz.com/blog/)
 - [Rara Labs](https://medium.com/@raralabs)
 - [SecurityPal](https://www.securitypalhq.com/blog)
+- [TechKraft](https://techkraftinc.com/blog/)
+- [wesionaryTEAM](https://articles.wesionary.team/)
 - [Yarsa Labs](https://blog.yarsalabs.com/)
 - [Young Innovations](https://blog.yipl.com.np/)
