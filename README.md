@@ -19,7 +19,6 @@ Collection of blogs/publications by Nepali devs.
 | [Ishan Manandhar](https://medium.com/@ishan02016)                | product design, frontend, javascript, typescript                   |
 | [Jagatjyoti Tuladhar](https://medium.com/@jagatjyoti.1si13cs040) | technology general, javascript                                     |
 | [Kshitiz Rimal](https://medium.com/@kshitizrimal)                | ai, ml                                                             |
-| [Milap Neupane](https://milapneupane.com.np/)                    | programming general, go, database, aws, node                       |
 | [Nikita Shrestha](https://sthaniki.medium.com/)                  | javascript, ai                                                     |
 | [Nirmal Dahal](https://nirmaldahal.com.np/#latestnews)           | cybersecurity                                                      |
 | [Prashant Acharya](https://medium.com/@prashaantacharya)         | javascript, react, node.js, programming                            |
@@ -54,4 +53,3 @@ Collection of blogs/publications by Nepali devs.
 - [TechKraft](https://techkraftinc.com/blog/)
 - [wesionaryTEAM](https://articles.wesionary.team/)
 - [Yarsa Labs](https://blog.yarsalabs.com/)
-- [Young Innovations](https://blog.yipl.com.np/)
