@@ -34,7 +34,7 @@ Collection of blogs/publications by Nepali devs.
 | [Sanjay Sanjel](https://dev.to/nepalilab)                        | beginner programming, javascript, nodejs                           |
 | [Saugat Acharya](https://theboring.dev)                          | tech, software engineering                                         |
 | [Shirish Shikhrakar](https://ux360.design/)                      | ui, ux                                                             |
-| [Shreyam Adhikari](https://shreyam1008.com.np/log/)              | software engineering, linux, ai                                    |
+| [Shreyam Adhikari](https://shreyam1008.com.np/log/)              | software engineering, linux, ai, go, typescript, development tools |
 | [Surhid Amatya](https://medium.com/@surhid.amatya)               | programming general, android development                           |
 | [Veshraj Ghimire](https://veshraj77.medium.com/)                 | Web Security, Bug Bounties, Cyber Security                         |
 | [Yankee Maharjan](https://yankee.dev/)                           | programming general, python, kubernetes                            |
